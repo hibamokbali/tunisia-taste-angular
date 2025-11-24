@@ -1,0 +1,194 @@
+{
+  "admin": {
+    "username": "admin",
+    "password": "admin1234"
+  },
+  "plats": [
+    {
+      "nom": "Couscous Royal",
+      "region": "Tozeur",
+      "photo": "/images/couscous.jpg",
+      "categorie": "Plat Principal",
+      "description": "Couscous garni de viande, pois chiches et légumes. Un plat festif et copieux typique des occasions spéciales.",
+      "ingredients": [
+        "Semoule",
+        "Agneau",
+        "Poulet",
+        "Pois chiches",
+        "Courge",
+        "Carottes",
+        "Oignons",
+        "Bouillon"
+      ],
+      "dateDecouverte": "1150-01-01",
+      "favori": true,
+      "dureeprepa": 90,
+      "nombreLikes": 145,
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "nom": "Lablabi",
+      "region": "Bizerte",
+      "photo": "/images/lablebi.jpg",
+      "categorie": "Soupe",
+      "description": "Soupe épaisse à base de pois chiches, pain grillé et harissa. Le petit-déjeuner traditionnel tunisien.",
+      "ingredients": [
+        "Pois chiches",
+        "Pain",
+        "Ail",
+        "Harissa",
+        "Huile d'olive",
+        "Cumin",
+        "Coriandre",
+        "Eau"
+      ],
+      "dateDecouverte": "1700-01-01",
+      "favori": true,
+      "dureeprepa": 45,
+      "nombreLikes": 119,
+      "comments": [
+        {
+          "nomUtil": "Riadh",
+          "message": "Parfait pendant l'hiver!",
+          "note": 5
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "nom": "Borzguen",
+      "region": "Le Kef",
+      "photo": "/images/borzguene.jpg",
+      "categorie": "Plat Principal",
+      "description": "Plat traditionnel du nord-ouest, préparé surtout au printemps. Viande de mouton coupée très finement et mélangée avec des noix, amandes, noisettes, pistaches, miel et cannelle. Saveur sucrée typique de la région.",
+      "ingredients": [
+        "Mouton",
+        "Amandes",
+        "Noisettes",
+        "Pistaches",
+        "Miel",
+        "Cannelle",
+        "Beurre",
+        "Sel"
+      ],
+      "dateDecouverte": "1700-04-01",
+      "favori": false,
+      "dureeprepa": 120,
+      "nombreLikes": 87,
+      "comments": []
+    },
+    {
+      "id": "4",
+      "nom": "Harissa",
+      "region": "Cap Bon",
+      "photo": "/images/harissa.jpg",
+      "categorie": "Sauce",
+      "description": "Sauce épicée traditionnelle à base de piments rouges, ail et épices. L'âme de la cuisine tunisienne.",
+      "ingredients": [
+        "Piments rouges",
+        "Ail",
+        "Carvi",
+        "Coriandre",
+        "Huile d'olive",
+        "Sel",
+        "Cumin"
+      ],
+      "dateDecouverte": "1550-12-01",
+      "favori": true,
+      "dureeprepa": 20,
+      "nombreLikes": 167,
+      "comments": [
+        {
+          "nomUtil": "Rashid",
+          "message": "Le secret de tous les bons plats!",
+          "note": 5
+        },
+        {
+          "nomUtil": "Amal",
+          "message": "Parfait avec le pain et le fromage",
+          "note": 5
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "nom": "Makroudh",
+      "region": "Kairouan",
+      "photo": "/images/makrouth.jpg",
+      "categorie": "Dessert",
+      "description": "Pâtisserie aux dates fourrée à la pâte de datte et trempée dans le miel et l'huile. Sucré et savoureux.",
+      "ingredients": [
+        "Semoule",
+        "Beurre",
+        "Datte",
+        "Sucre",
+        "Miel",
+        "Huile",
+        "Eau de fleur d'oranger"
+      ],
+      "dateDecouverte": "1650-07-22",
+      "favori": true,
+      "dureeprepa": 60,
+      "nombreLikes": 156,
+      "comments": [
+        {
+          "nomUtil": "Salima",
+          "message": "Délices sucrés!",
+          "note": 5
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "nom": "Brik au Thon",
+      "region": "Monastir",
+      "photo": "/images/brik.jpg",
+      "categorie": "Entrée",
+      "description": "Pâte croustillante fourrée au thon, œuf, câpres et oignons. Un classique des entrées tunisiennes.",
+      "ingredients": [
+        "Pâte brick",
+        "Thon",
+        "Œuf",
+        "Câpres",
+        "Oignons",
+        "Persil",
+        "Citron",
+        "Huile"
+      ],
+      "dateDecouverte": "1550-06-14",
+      "favori": false,
+      "dureeprepa": 25,
+      "nombreLikes": 134,
+      "comments": [
+        {
+          "nomUtil": "Nizar",
+          "message": "Mélange de saveurs excellent!",
+          "note": 4
+        }
+      ]
+    },
+    {
+      "nom": "Salade Méchouia",
+      "region": "gafsa",
+      "photo": "/images/salade mechwiya.jpg",
+      "categorie": "Salade",
+      "description": "Salade de piments rouges grillés, tomates et oignons. Frais et savoureux, accompagne tous les repas.",
+      "ingredients": [
+        "Piment rouge",
+        "Tomate",
+        "Oignon",
+        "Ail",
+        "Huile d'olive",
+        "Citron",
+        "Sel",
+        "Persil"
+      ],
+      "dateDecouverte": "1492-01-05",
+      "favori": true,
+      "dureeprepa": 40,
+      "nombreLikes": 142,
+      "id": "7"
+    }
+  ]
+}

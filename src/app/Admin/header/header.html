@@ -1,0 +1,39 @@
+header.html
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand d-flex align-items-center gap-2" routerLink="/admin">
+    <i class="bi bi-shield-lock-fill fs-4"></i>
+    <span>Admin Panel</span>
+  </a>
+
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-bs-toggle="collapse"
+    data-bs-target="#adminMenu"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="adminMenu">
+    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/manage">
+          <i class="bi bi-kanban-fill me-1"></i>
+          Gestion des patrimoines
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/admin/changemdp">
+          <i class="bi bi-key-fill me-1"></i>
+          Modifier mot de passe
+        </a>
+      </li>
+    </ul>
+
+    <button class="btn btn-outline-light d-flex align-items-center gap-2" (click)="onDisconnect()">
+      <i class="bi bi-box-arrow-right"></i>
+      Déconnexion
+    </button>
+  </div>
+</nav>

@@ -1,0 +1,42 @@
+
+<div class="card h-100 shadow-sm">
+  <a href="#" class="text-white text-decoration-none">
+    <div class="card-header text-dark mb-0 fw-bold text-center py-3">
+      {{ plat.nom }}
+    </div>
+  </a>
+  <img
+    [src]="plat.photo"
+    class="card-img-top"
+    [alt]="plat.nom"
+    style="height: 300px; object-fit: cover"
+  />
+
+  <div>
+    <p class="card-text mb-3">
+      <span class="badge rounded-pill bg-warning text-dark me-6">
+        <i class="bi bi-geo-alt-fill"></i>
+        {{ plat.region }}
+      </span>
+      <span class="badge rounded-pill bg-success">
+        {{ plat.categorie }}
+      </span>
+      <span class="badge bg-danger rounded-pill me-6">
+        <i class="bi bi-hand-thumbs-up"></i> {{ plat.nombreLikes }} likes
+      </span>
+    </p>
+    <div class="card-footer bg-white border-0 text-center">
+      <button class="btn btn-outline-primary btn-sm" [routerLink]="['/plats', plat.id]">
+        <i class="bi bi-arrow-up-circle"></i> Voir détails
+      </button>
+      <button
+        class="btn btn-sm"
+        [ngClass]="plat.favori ? 'btn-danger' : 'btn-outline-danger'"
+        (click)="ajoutFavori(plat)"
+      >
+        <i class="bi" [ngClass]="plat.favori ? 'bi-heart-fill' : 'bi-heart'"></i>
+        Favori
+      </button>
+    </div>
+  </div>
+</div>

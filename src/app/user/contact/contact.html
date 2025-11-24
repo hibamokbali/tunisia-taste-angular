@@ -1,0 +1,98 @@
+<div class="container mt-5">
+  <!-- TITRE PRINCIPAL -->
+  <div class="row text-center mb-4">
+    <div class="col">
+      <h1>Bienvenue à <span class="titre-secondaire">Tunisia Taste</span></h1>
+
+      <p class="lead description-principale">
+        Découvrez les saveurs authentiques du patrimoine culinaire tunisien.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION À PROPOS -->
+  <div class="row mb-5 align-items-center">
+    <div class="col-md-6">
+      <h2 class="section-titre">À propos de notre site</h2>
+      <p>
+        <strong>Tunisia Taste</strong> met à l’honneur la richesse de la cuisine tunisienne :
+        couscous, tajines, Lablabi, briks, desserts traditionnels et bien plus encore.
+      </p>
+      <p>
+        Chaque plat raconte une histoire, un héritage transmis de génération en génération. Explorez
+        notre collection de recettes typiques, soigneusement sélectionnées.
+      </p>
+    </div>
+
+    <div class="col-md-6 text-center">
+      <img
+        src="/images/logolight.jpeg"
+        alt="Cuisine tunisienne"
+        class="img-fluid rounded shadow-lg"
+      />
+    </div>
+  </div>
+
+  <!-- SECTION NOS PLATS -->
+  <div class="row mb-5">
+    <h2 class="text-center mb-4 section-rouge">Plats Tunisiens Populaires</h2>
+    @for( p of topPlats;track $index){
+    <div class="col-md-4">
+      <div class="card shadow card-plat">
+        <img [src]="p.photo" class="card-img-top" [alt]="p.nom" />
+        <div class="card-body">
+          <h5 class="card-title">{{ p.nom }}</h5>
+          <p class="card-text">
+            {{ p.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
+
+  <!-- SECTION AUTEURS -->
+  <div class="row mb-5">
+    <div class="col">
+      <h2 class="section-titre">À propos des auteurs</h2>
+      <p>Nous sommes deux passionnés de cuisine tunisienne et de patrimoine culinaire.</p>
+
+      <h4 class="section-rouge">Équipe :</h4>
+      <ul>
+        <li>
+          <strong>Hi</strong> – Passionnée de gastronomie tunisienne
+          <p>
+            Elle adore revisiter des recettes anciennes avec une touche moderne, tout en respectant
+            l’authenticité des plats tunisiens.
+          </p>
+        </li>
+
+        <li>
+          <strong>Manai Arij</strong> – Amateur d’histoire culinaire
+          <p>
+            Toujours curieux d'apprendre l'origine de chaque recette et les traditions régionales
+            qui l'accompagnent.
+          </p>
+        </li>
+      </ul>
+
+      <p>
+        Ensemble, nous avons créé <strong>Tunisia Taste</strong> pour faire découvrir la richesse
+        gastronomique de la Tunisie.
+      </p>
+    </div>
+  </div>
+
+  <!-- SECTION AVANTAGES -->
+  <div class="row mb-5">
+    <div class="col">
+      <h2 class="section-rouge">Pourquoi visiter notre site ?</h2>
+      <ul>
+        <li><strong>Recettes authentiques</strong> provenant de différentes régions.</li>
+        <li><strong>Photos réelles</strong> de plats maison.</li>
+        <li><strong>Descriptions culturelles</strong> détaillées.</li>
+        <li><strong>Navigation simple</strong> et agréable.</li>
+      </ul>
+    </div>
+  </div>
+</div>

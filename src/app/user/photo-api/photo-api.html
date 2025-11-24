@@ -1,0 +1,32 @@
+<div class="container my-5">
+  <div class="text-center mb-4">
+    <h2>Photos de Nourriture</h2>
+    <p class="text-muted">Données récupérées depuis l'API Unsplash</p>
+  </div>
+
+  <div *ngIf="chargement" class="text-center my-5">
+    <div class="spinner-border text-primary"></div>
+    <p class="mt-2">Chargement des photos...</p>
+  </div>
+
+  <div *ngIf="erreur" class="alert alert-danger text-center">
+    {{ erreur }}
+  </div>
+
+  <div *ngIf="!chargement && !erreur" class="row g-4">
+    <div *ngFor="let photo of photos" class="col-md-4">
+      <div class="card shadow-sm h-100">
+        <img
+          [src]="photo.urls.small"
+          [alt]="photo.alt_description"
+          class="card-img-top"
+          style="height: 250px; object-fit: cover"
+        />
+        <div class="card-body">
+          <h6 class="mb-1">{{ photo.user.name }}</h6>
+          <small class="text-muted"> {{ photo.likes }} likes </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

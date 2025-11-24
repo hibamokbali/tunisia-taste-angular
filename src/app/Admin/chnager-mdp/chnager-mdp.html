@@ -1,0 +1,127 @@
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-6 col-md-8">
+      <div class="card shadow-lg border-0">
+        <!-- Body -->
+        <div class="card-body p-4">
+          <div [formGroup]="passForm">
+            <!-- Nouveau mot de passe -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">
+                <i class="bi bi-key-fill text-danger me-2"></i>
+                Nouveau mot de passe
+              </label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-lock-fill"></i>
+                </span>
+                <input
+                  type="password"
+                  class="form-control form-control-lg"
+                  formControlName="mdp"
+                  placeholder="Entrez le nouveau mot de passe"
+                  [class.is-invalid]="password?.invalid && password?.touched"
+                />
+              </div>
+
+              <!-- Messages d'erreur -->
+              @if(password?.invalid && password?.touched) {
+              <div class="text-danger small mt-2">
+                @if(password?.errors?.['required']) {
+                <div>
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Le mot de passe est requis
+                </div>
+                } @if(password?.errors?.['minlength']) {
+                <div>
+                  <i class="bi bi-exclamation-circle me-1"></i>
+                  Le mot de passe doit contenir au moins 6 caractères
+                </div>
+                }
+              </div>
+              }
+
+              <small class="text-muted d-block mt-2">
+                <i class="bi bi-info-circle me-1"></i>
+                Minimum 6 caractères recommandés
+              </small>
+            </div>
+
+            <!-- Confirmer mot de passe -->
+            <div class="mb-4">
+              <label class="form-label fw-semibold">
+                <i class="bi bi-shield-check text-danger me-2"></i>
+                Confirmer le mot de passe
+              </label>
+              <div class="input-group">
+                <span class="input-group-text">
+                  <i class="bi bi-lock-fill"></i>
+                </span>
+                <input
+                  type="password"
+                  class="form-control form-control-lg"
+                  formControlName="confpwd"
+                  placeholder="Confirmez le mot de passe"
+                  [class.is-invalid]="confpassword?.invalid && confpassword?.touched"
+                />
+              </div>
+
+              @if(confpassword?.invalid && confpassword?.touched) {
+              <div class="text-danger small mt-2">
+                <i class="bi bi-exclamation-circle me-1"></i>
+                Veuillez confirmer le mot de passe
+              </div>
+              }
+
+              <!-- Vérification correspondance -->
+              @if(password?.value && confpassword?.value && password?.value !== confpassword?.value)
+              {
+              <div class="alert alert-warning mt-2 mb-0 py-2">
+                <i class="bi bi-exclamation-triangle me-1"></i>
+                Les mots de passe ne correspondent pas
+              </div>
+              } @if(password?.value && confpassword?.value && password?.value ===
+              confpassword?.value) {
+              <div class="alert alert-success mt-2 mb-0 py-2">
+                <i class="bi bi-check-circle me-1"></i>
+                Les mots de passe correspondent
+              </div>
+              }
+            </div>
+
+            <!-- Message de succès -->
+            @if(successMessage) {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+              <i class="bi bi-check-circle-fill me-2"></i>
+              <strong>Succès !</strong> {{ successMessage }}
+              <button type="button" class="btn-close" (click)="successMessage = ''"></button>
+            </div>
+            }
+
+            <!-- Message d'erreur -->
+            @if(errorMessage) {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+              <i class="bi bi-exclamation-triangle-fill me-2"></i>
+              <strong>Erreur !</strong> {{ errorMessage }}
+              <button type="button" class="btn-close" (click)="errorMessage = ''"></button>
+            </div>
+            }
+
+            <!-- Bouton -->
+            <div class="d-grid gap-2 mt-4">
+              <button
+                type="button"
+                class="btn btn-danger btn-lg fw-semibold"
+                (click)="changer()"
+                [disabled]="passForm.invalid"
+              >
+                <i class="bi bi-check-circle me-2"></i>
+                Modifier le mot de passe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

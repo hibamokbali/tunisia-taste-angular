@@ -1,0 +1,61 @@
+<div class="container mt-5">
+  <h1>{{ isEdit ? 'Modifier le plat' : 'Ajouter un plat' }}</h1>
+
+  <div class="card mt-4">
+    <div class="card-body">
+      <form [formGroup]="platForm" (ngSubmit)="save()">
+        <div class="mb-3">
+          <label class="form-label">Nom</label>
+          <input class="form-control" formControlName="nom" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Région</label>
+          <input class="form-control" formControlName="region" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Catégorie</label>
+          <input class="form-control" formControlName="categorie" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Photo (URL)</label>
+          <input class="form-control" formControlName="photo" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <textarea class="form-control" rows="3" formControlName="description"></textarea>
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Ingrédients (séparés par des virgules)</label>
+          <input class="form-control" formControlName="ingredients" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Date Découverte</label>
+          <input type="date" class="form-control" formControlName="dateDecouverte" />
+        </div>
+
+        <div class="mb-3">
+          <label class="form-label">Durée Préparation (min)</label>
+          <input type="number" class="form-control" formControlName="dureeprepa" />
+        </div>
+
+        <div class="form-check mb-3">
+          <input type="checkbox" class="form-check-input" formControlName="favori" id="favori" />
+          <label class="form-check-label" for="favori">Favori</label>
+        </div>
+
+        <button class="btn btn-success" type="submit">
+          {{ isEdit ? 'Mettre à jour' : 'Ajouter' }}
+        </button>
+        <button class="btn btn-secondary ms-2" type="button" routerLink="/admin/manage">
+          Annuler
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

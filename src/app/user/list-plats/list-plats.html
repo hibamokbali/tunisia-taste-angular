@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h2 class="text-center mb-4 fw-bold text-danger">
+    <i class="bi bi-bowl-fill me-2"></i>
+    Nos Plats Tunisiens
+  </h2>
+
+  <!-- Formulaire de recherche -->
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h5 class="card-title mb-3">
+        <i class="bi bi-funnel-fill me-2"></i>
+        Rechercher un plat
+      </h5>
+
+      <div class="row g-2">
+        <div class="col-md-5">
+          <label class="form-label fw-semibold">Nom du plat</label>
+          <input
+            type="text"
+            [(ngModel)]="nom"
+            name="nom"
+            class="form-control"
+            placeholder="Ex: Couscous, Brik..."
+            (input)="rechercher()"
+          />
+        </div>
+
+        <div class="col-md-5">
+          <label class="form-label fw-semibold">Catégorie</label>
+          <select
+            class="form-select"
+            [(ngModel)]="categorie"
+            name="categorie"
+            (change)="rechercher()"
+          >
+            <option value="">Toutes les catégories</option>
+            <option value="Entrée">Entrée</option>
+            <option value="Plat Principal">Plat Principal</option>
+            <option value="Dessert">Dessert</option>
+            <option value="Sauce">Sauce</option>
+            <option value="Salade">Salade</option>
+            <option value="Soupe">Soupe</option>
+          </select>
+        </div>
+
+        <div class="col-md-2 d-flex align-items-end">
+          <button type="button" class="btn btn-secondary w-100" (click)="resetSearch()">
+            <i class="bi bi-x-circle me-1"></i>
+            Réinitialiser
+          </button>
+        </div>
+      </div>
+      <br />
+
+      <!-- Liste des plats -->
+      @if(filteredPlats.length === 0) {
+      <div class="alert alert-warning text-center py-5">
+        <i class="bi bi-exclamation-triangle fs-1 d-block mb-3"></i>
+        <h5>Aucun plat trouvé</h5>
+        <p class="mb-0">Essayez de modifier vos critères de recherche</p>
+      </div>
+      } @else {
+      <div class="row g-4">
+        @for(p of filteredPlats; track p.id) {
+        <div class="col-lg-4 col-md-6">
+          <app-plat-item [plat]="p"></app-plat-item>
+        </div>
+        }
+      </div>
+      }
+    </div>
+  </div>
+</div>

@@ -1,0 +1,53 @@
+<div class="container my-5">
+  <div
+    class="card mx-auto shadow-lg border-0"
+    style="max-width: 700px; border-radius: 20px; overflow: hidden"
+  >
+    <img
+      [src]="plat.photo"
+      class="card-img-top"
+      [alt]="plat.nom"
+      style="height: 300px; object-fit: cover"
+    />
+
+    <div class="card-body p-4 bg-light">
+      <h2 class="card-title text-center mb-3 text-primary">{{ plat.nom }}</h2>
+
+      <p>
+        <strong>Région :</strong> <span class="badge bg-info text-dark">{{ plat.region }}</span>
+      </p>
+      <p>
+        <strong>Catégorie :</strong> <span class="badge bg-success">{{ plat.categorie }}</span>
+      </p>
+      <p><strong>Description :</strong> {{ plat.description }}</p>
+
+      <p><strong>Ingrédients :</strong></p>
+      <ul class="list-inline mb-3">
+        @for (ingredient of plat.ingredients; track $index){
+        <li class="list-inline-item">
+          <span class="badge bg-warning text-dark p-2">{{ ingredient }}</span>
+        </li>
+        }
+      </ul>
+
+      <div class="d-flex justify-content-between flex-wrap mb-3">
+        <span class="badge bg-secondary">
+          <i class="bi bi-heart"></i>
+          <span [class.favori]="plat.favori" [class.non-favori]="!plat.favori"> </span
+        ></span>
+        <span class="badge bg-dark">Durée: {{ plat.dureeprepa }} min</span>
+      </div>
+
+      <p>
+        <strong> <i class="bi bi-calendar"></i>Date de découverte :</strong>
+        <em>{{ plat.dateDecouverte }}</em>
+      </p>
+
+      <div class="text-center">
+        <button class="btn btn-outline-primary btn-lg mt-3" [routerLink]="['/plats']">
+          Retour <i class="bi bi-arrow-bar-left"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
