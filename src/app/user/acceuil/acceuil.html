@@ -1,0 +1,124 @@
+<!-- acceuil.html -->
+
+<!-- Header -->
+<header class="bg-danger text-white text-center py-5">
+  <div class="container">
+    <h1 class="display-3 fw-bold">🇹🇳 Tunisia Taste</h1>
+    <p class="lead fs-4">Découvrez la richesse de la cuisine tunisienne</p>
+  </div>
+</header>
+
+<!-- Main -->
+<main class="container text-center my-5 py-5">
+  <h2 class="display-4 mb-4">Bienvenue sur Tunisia Taste</h2>
+  <p class="lead fs-5 mb-4">
+    Explorez la richesse de la cuisine tunisienne et découvrez des plats traditionnels et modernes à
+    travers nos recettes et photos.
+  </p>
+
+  <!-- Icônes des caractéristiques -->
+  <div class="row my-5">
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-star-fill text-warning fs-1"></i>
+      <h4 class="mt-3">Qualité</h4>
+      <p>Ingrédients frais et authentiques</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-heart-fill text-danger fs-1"></i>
+      <h4 class="mt-3">Passion</h4>
+      <p>Recettes traditionnelles préservées</p>
+    </div>
+    <div class="col-md-4 mb-4">
+      <i class="bi bi-award-fill text-primary fs-1"></i>
+      <h4 class="mt-3">Excellence</h4>
+      <p>Saveurs uniques et raffinées</p>
+    </div>
+  </div>
+
+  <button class="btn btn-danger btn-lg px-5 py-3 mt-3" [routerLink]="['/plats']">
+    <i class="bi bi-arrow-right-circle me-2"></i>
+    Découvrir nos Plats
+  </button>
+</main>
+
+<!-- Footer Grand avec 3 colonnes -->
+<footer class="bg-dark text-white py-5 mt-5">
+  <div class="container">
+    <div class="row">
+      <!-- Colonne 1 : À propos -->
+      <div class="col-md-4 mb-4">
+        <h4 class="mb-3">🇹🇳 Tunisia Taste</h4>
+        <p>
+          Découvrez l'authenticité de la cuisine tunisienne avec nos plats traditionnels préparés
+          selon des recettes ancestrales.
+        </p>
+        <p class="text-white-50">
+          <i class="bi bi-heart-fill text-danger"></i>
+          Fait avec passion à Tunis
+        </p>
+      </div>
+
+      <!-- Colonne 2 : Liens rapides -->
+      <div class="col-md-4 mb-4">
+        <h5 class="mb-3">Navigation</h5>
+        <ul class="list-unstyled">
+          <li class="mb-2">
+            <a routerLink="/acceuil" class="text-white-50 text-decoration-none">
+              <i class="bi bi-chevron-right"></i> Accueil
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/plats" class="text-white-50 text-decoration-none">
+              <i class="bi bi-chevron-right"></i> Nos Plats
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/photos" class="text-white-50 text-decoration-none">
+              <i class="bi bi-chevron-right"></i> Galerie Photos
+            </a>
+          </li>
+          <li class="mb-2">
+            <a routerLink="/contact" class="text-white-50 text-decoration-none">
+              <i class="bi bi-chevron-right"></i> À propos
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Colonne 3 : Contact & Réseaux -->
+      <div class="col-md-4 mb-4">
+        <h5 class="mb-3">Contact</h5>
+        <p class="mb-2">
+          <i class="bi bi-geo-alt-fill text-danger me-2"></i>
+          Tunis, Tunisie
+        </p>
+        <p class="mb-2">
+          <i class="bi bi-envelope-fill text-danger me-2"></i>
+          contact@tunisiataste.tn
+        </p>
+
+        <h6 class="mt-4">Suivez-nous</h6>
+        <div class="d-flex gap-3 mt-2">
+          <a href="#" class="text-white fs-4">
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a href="#" class="text-white fs-4">
+            <i class="bi bi-instagram"></i>
+          </a>
+          <a href="#" class="text-white fs-4">
+            <i class="bi bi-twitter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <hr class="border-secondary my-4" />
+
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0 text-white-50">&copy; 2025 Tunisia Taste. Tous droits réservés.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end"></div>
+    </div>
+  </div>
+</footer>
