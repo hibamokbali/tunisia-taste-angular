@@ -40,7 +40,7 @@
 
       <p>
         <strong> <i class="bi bi-calendar"></i>Date de découverte :</strong>
-        <em>{{ plat.dateDecouverte }}</em>
+        <em>{{ plat.dateDecouverte | date : 'dd/MM/yyyy' }}</em>
       </p>
 
       <div class="text-center">

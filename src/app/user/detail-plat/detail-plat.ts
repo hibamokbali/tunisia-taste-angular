@@ -1,12 +1,13 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, Pipe } from '@angular/core';
 import { PlatTunisien } from '../../interfaces/plat-tunisien';
 import { ServicePlat } from '../../services/service-plat';
 import { ActivatedRoute, RouterLink } from '@angular/router';
+import { DatePipe } from '@angular/common';
 
 
 @Component({
   selector: 'app-detail-plat',
-  imports: [RouterLink],
+  imports: [RouterLink,DatePipe],
   templateUrl: './detail-plat.html',
   styleUrl: './detail-plat.css',
 })
